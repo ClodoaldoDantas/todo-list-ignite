@@ -50,10 +50,16 @@
 
   .checkboxText {
     margin-left: 0.75rem;
+
+    &.active {
+      text-decoration: line-through;
+      color: var(--gray-300);
+    }
   }
 }
 
 .taskDeleteButton {
+  margin-left: auto;
   flex-shrink: 0;
   width: 2rem;
   height: 2rem;

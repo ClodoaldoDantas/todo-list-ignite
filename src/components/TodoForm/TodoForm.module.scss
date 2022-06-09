@@ -10,6 +10,11 @@
 
   margin-top: -1.75rem;
 
+  @media (max-width: 425px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   input {
     flex: 1;
     padding: 1rem;
@@ -46,8 +51,13 @@
 
     transition: 0.2s;
 
-    &:hover {
+    &:not(:disabled):hover {
       background-color: var(--blue-500);
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
     }
   }
 }
